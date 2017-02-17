@@ -1,7 +1,7 @@
-require './filler'
-require './tuples'
-require './number_divisors'
-require './prime_divisors'
+require './riddle/filler'
+require './riddle/tuples'
+require './riddle/number_divisors'
+require './riddle/prime_divisors'
 
 # For a given number find the list of prime divisors,
 # and their corresponding powers, since every number could be
