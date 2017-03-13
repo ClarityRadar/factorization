@@ -28,7 +28,7 @@ puts tuples_list.to_s # => [[2, 4], [3, 2], [5, 1], [7, 1], [11, 1], [13, 1]]
 ```
 
 ### PrimeDivisors
-Retruns only the divisors which are prime numbers.
+`Riddle::PrimeDivisors` - retruns only the divisors which are prime numbers.
 
 ### NumberDivisors
-Returns all of the divisors for a given number.
+`Riddle::NumberDivisors` - returns all of the divisors for a given number.
