@@ -1,4 +1,5 @@
 module Riddle
+  # :nodoc:
   class PrimeDivisors
     attr_reader :number, :divisors
 

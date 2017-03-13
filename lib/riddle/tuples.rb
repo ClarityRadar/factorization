@@ -1,6 +1,5 @@
 module Riddle
-  # Represents a decomposition of a number by
-  # its prime divisors on the corresponding power.
+  # :nodoc:
   class Tuples
     attr_reader :number
 
@@ -27,6 +26,7 @@ module Riddle
     def divisibility_count_helper(transitional, divisor, count = 0)
       if (transitional % divisor).zero?
         new_transitional = transitional / divisor
+
         divisibility_count_helper(new_transitional, divisor, count + 1)
       else
         count

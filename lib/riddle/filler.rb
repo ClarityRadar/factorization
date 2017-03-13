@@ -1,4 +1,5 @@
 module Riddle
+  # :nodoc:
   module Filler
     def divisor?(divisor)
       (@number % divisor).zero?

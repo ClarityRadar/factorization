@@ -1,4 +1,5 @@
 module Riddle
+  # :nodoc:
   class NumberDivisors
     include Filler
 
