@@ -9,7 +9,7 @@ module Riddle
     end
 
     def prime_divisors
-      Riddle::PrimeDivisors.new(number).to_a
+      PrimeDivisors.new(number).to_a
     end
 
     def to_a
