@@ -18,11 +18,11 @@ module Riddle
       end
     end
 
+    private
+
     def divisibility_count(divisor)
       divisibility_count_helper(number, divisor)
     end
-
-    private
 
     def divisibility_count_helper(transitional, divisor, count = 0)
       if (transitional % divisor).zero?
