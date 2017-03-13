@@ -1,6 +1,8 @@
 module Riddle
   # :nodoc:
   class Tuples
+    include Divisable
+
     attr_reader :number
 
     def initialize(number)
@@ -24,7 +26,7 @@ module Riddle
     end
 
     def divisibility_count_helper(transitional, divisor, count = 0)
-      if (transitional % divisor).zero?
+      if divisor?(transitional, divisor)
         new_transitional = transitional / divisor
 
         divisibility_count_helper(new_transitional, divisor, count + 1)

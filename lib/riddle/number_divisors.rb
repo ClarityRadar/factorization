@@ -1,7 +1,7 @@
 module Riddle
   # :nodoc:
   class NumberDivisors
-    include Filler
+    include Divisable
 
     attr_reader :number
 
@@ -10,7 +10,7 @@ module Riddle
     end
 
     def to_a
-      (1..number).select { |divisor| divisor?(divisor) }
+      (1..number).select { |divisor| divisor?(number, divisor) }
     end
 
     def size

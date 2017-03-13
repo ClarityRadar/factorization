@@ -1,18 +1,16 @@
 module Riddle
   # :nodoc:
   class PrimeDivisors
-    attr_reader :number, :divisors
+    include Divisable
+
+    attr_reader :number
 
     def initialize(number)
-      @number   = number
-      @divisors = NumberDivisors.new(number).to_a
+      @number = number
     end
 
     def to_a
-      divisors.select do |divisor|
-        divisor_divisors = NumberDivisors.new(divisor)
-        divisor_divisors.size == 2
-      end
+      divisors(number).select { |divisor| divisors(divisor).size == 2 }
     end
   end
 end
