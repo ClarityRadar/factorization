@@ -3,8 +3,6 @@ module Riddle
   class Tuples
     include Divisable
 
-    attr_reader :number
-
     def initialize(number)
       @number = number
     end
@@ -21,12 +19,12 @@ module Riddle
 
     private
 
-    def divisibility_count(divisor, count = 0, transitional = number)
-      if divisor?(transitional, divisor)
-        divisibility_count(divisor, count + 1, transitional / divisor)
-      else
-        count
-      end
+    attr_reader :number
+
+    def divisibility_count(divisor, count = 0, decomposure = number)
+      return count unless divisor?(decomposure, divisor)
+
+      divisibility_count(divisor, count + 1, decomposure / divisor)
     end
   end
 end
