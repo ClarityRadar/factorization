@@ -21,15 +21,9 @@ module Riddle
 
     private
 
-    def divisibility_count(divisor)
-      divisibility_count_helper(number, divisor)
-    end
-
-    def divisibility_count_helper(transitional, divisor, count = 0)
+    def divisibility_count(divisor, count = 0, transitional = number)
       if divisor?(transitional, divisor)
-        new_transitional = transitional / divisor
-
-        divisibility_count_helper(new_transitional, divisor, count + 1)
+        divisibility_count(divisor, count + 1, transitional / divisor)
       else
         count
       end
