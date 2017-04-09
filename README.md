@@ -1,6 +1,6 @@
 # Riddle
 
-Every number could be decomposed as a multiplication of prime numbers, each of which raised to a corresponding power.
+Every integer could be decomposed as a multiplication of prime numbers, each of which raised to a corresponding power.
 
 For example the number 720_720 evaluates to:
 `[[2, 4], [3, 2], [5, 1], [7, 1], [11, 1], [13, 1]]`
