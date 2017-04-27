@@ -22,6 +22,14 @@ RSpec.describe Riddle::Tuples do
       end
     end
 
+    context 'when the number is 665280' do
+      let(:number) { 665_280 }
+
+      it 'returns the expected list of tuples' do
+        expect(subject.to_a).to eq [[2, 6], [3, 3], [5, 1], [7, 1], [11, 1]]
+      end
+    end
+
     context 'when the given number is 171717' do
       let(:number) { 171_717 }
 
