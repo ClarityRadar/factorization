@@ -21,10 +21,16 @@ module Riddle
 
     attr_reader :number
 
-    def divisibility_count(divisor, count = 0, decomposure = number)
-      return count unless divisor?(decomposure, divisor)
+    def divisibility_count(divisor)
+      count = 0
+      decomposure = number
 
-      divisibility_count(divisor, count + 1, decomposure / divisor)
+      while divisor?(decomposure, divisor)
+        count += 1
+        decomposure /= divisor
+      end
+
+      count
     end
   end
 end
